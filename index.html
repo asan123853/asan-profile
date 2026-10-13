@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Асан Жандарбек</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: #0b0b12;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, #6335a8, transparent 38%),
+    radial-gradient(ellipse at 100% 70%, #173e68, transparent 38%);
+  padding: 28px 16px;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.brand {
+  color: #c7b5ff;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.nav-tag {
+  border: 1px solid #ffffff35;
+  border-radius: 30px;
+  padding: 9px 13px;
+  font-size: 12px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  border: 1px solid #ffffff25;
+  border-radius: 28px;
+  background: #ffffff0d;
+  box-shadow: 0 24px 70px #0005;
+}
+
+.eyebrow {
+  color: #b7a0ff;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 1.1;
+}
+
+h1 span {
+  color: #b7a0ff;
+}
+
+.intro {
+  color: #c4c4d8;
+  line-height: 1.8;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.pill {
+  padding: 9px 12px;
+  background: #ffffff10;
+  border: 1px solid #ffffff20;
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+.avatar-area {
+  text-align: center;
+}
+
+.avatar-frame {
+  display: block;
+  width: 220px;
+  height: 220px;
+  max-width: 65vw;
+  max-height: 65vw;
+  margin: auto;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: conic-gradient(
+    #9e7bff,
+    #56d8e8,
+    #f4a5ff,
+    #9e7bff
+  );
+  transition: .2s;
+}
+
+.avatar-frame:hover {
+  transform: scale(1.04);
+}
+
+#avatar {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #24243a;
+  border: 5px solid #11111c;
+}
+
+#photo {
+  display: none;
+}
+
+.hint {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 12px;
+}
+
+.section-head {
+  margin: 34px 0 14px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.card {
+  padding: 22px;
+  border: 1px solid #ffffff20;
+  border-radius: 18px;
+  background: #ffffff09;
+}
+
+.icon {
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #bdbdd2;
+}
+
+footer {
+  margin-top: 28px;
+  text-align: center;
+  color: #999;
+  font-size: 11px;
+}
+
+@media (max-width: 650px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .avatar-area {
+    grid-row: 1;
+  }
+
+  .pills {
+    justify-content: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="wrap">
+
+  <nav>
+    <div class="brand">PERSONAL / PAGE</div>
+    <div class="nav-tag">Личная страница</div>
+  </nav>
+
+  <section class="hero">
+
+    <div>
+      <div class="eyebrow">ДОБРО ПОЖАЛОВАТЬ</div>
+
+      <h1>Асан<br><span>Жандарбек</span></h1>
+
+      <p class="intro">
+        Это моя личная страница. Здесь можно узнать
+        немного обо мне, моих интересах и целях.
+      </p>
+
+      <div class="pills">
+        <span class="pill">💻 Веб-разработка</span>
+        <span class="pill">🎯 Новые цели</span>
+        <span class="pill">✨ Развитие</span>
+      </div>
+    </div>
+
+    <div class="avatar-area">
+
+      <label class="avatar-frame" for="photo"
+        title="Нажми на аватар, чтобы выбрать фото">
+
+        <img id="avatar" alt="Мой аватар"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Crect width='240' height='240' fill='%2324243a'/%3E%3Ccircle cx='120' cy='86' r='42' fill='%239c91c9'/%3E%3Cpath d='M35 235c8-56 39-83 85-83s77 27 85 83' fill='%239c91c9'/%3E%3C/svg%3E">
+
+      </label>
+
+      <input type="file" id="photo" accept="image/*">
+
+      <div class="hint">
+        Нажми прямо на аватар, чтобы заменить фото
+      </div>
+
+    </div>
+  </section>
+
+  <h2 class="section-head">Немного обо мне</h2>
+
+  <section class="cards">
+
+    <article class="card">
+      <div class="icon">👋</div>
+      <h3>Приветствие</h3>
+      <p>Рад видеть тебя на моей личной странице.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🚀</div>
+      <h3>Мои цели</h3>
+      <p>Учиться новому, развивать навыки
+      и создавать интересные проекты.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🖥️</div>
+      <h3>Мои интересы</h3>
+      <p>Компьютеры, технологии, дизайн
+      и создание сайтов.</p>
+    </article>
+
+  </section>
+
+  <footer>
+    СОЗДАНО С ПОМОЩЬЮ HTML · CSS · JAVASCRIPT
+  </footer>
+
+</main>
+
+<script>
+document.getElementById('photo').addEventListener('change',
+function () {
+  const file = this.files && this.files[0];
+
+  if (!file) return;
+
+  if (!file.type.startsWith('image/')) {
+    alert('Выбери файл изображения.');
+    this.value = '';
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = function (event) {
+    document.getElementById('avatar').src =
+      event.target.result;
+  };
+
+  reader.readAsDataURL(file);
+});
+</script>
+
+</body>
+</html>
